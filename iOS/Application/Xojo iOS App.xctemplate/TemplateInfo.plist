@@ -108,11 +108,11 @@ dim setAppPath as string = &quot;export XOJO_BUILD_LOCATION=&quot;&quot;&quot;+C
 dim cdProjectPath as string = &quot;cd  &quot;&quot;$PROJECT_PATH&quot;+&quot;/Xcode/___PACKAGENAME___&quot;&quot;;&quot;    
 
 //clean any previous build  
-call doshellcommand(setAppPath + cdProjectPath + &quot; xcodebuild clean -scheme ___PACKAGENAME___ &gt; build_log.txt 2&gt;&amp;1&quot;)  
+call doshellcommand(setAppPath + cdProjectPath + &quot; xcodebuild clean -scheme &quot;&quot;___PACKAGENAME___&quot;&quot; &gt; build_log.txt 2&gt;&amp;1&quot;)  
 //do the work  
-call doshellcommand(setAppPath + cdProjectPath + &quot; xcodebuild -scheme ___PACKAGENAME___ &gt;&gt; build_log.txt 2&gt;&amp;1&quot;)  
+call doshellcommand(setAppPath + cdProjectPath + &quot; xcodebuild -scheme &quot;&quot;___PACKAGENAME___&quot;&quot; &gt;&gt; build_log.txt 2&gt;&amp;1&quot;)  
 //Add to Xcode Organizer  
-call doshellcommand(setAppPath + cdProjectPath + &quot;xcodebuild archive -scheme ___PACKAGENAME___ &gt;&gt; build_log.txt 2&gt;&amp;1&quot;)    
+call doshellcommand(setAppPath + cdProjectPath + &quot;xcodebuild archive -scheme &quot;&quot;___PACKAGENAME___&quot;&quot; &gt;&gt; build_log.txt 2&gt;&amp;1&quot;)    
 ```
 </string>
 		<key>About.txt</key>
